@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+<div class="component">
+    <table class="table table-sm table-striped">
+        <tr>
+            <td>Id:</td>
+            <td>
+                <input [ngModel]="student.id" type="text" disabled>
+            </td><!-- without parenthesis is is more like one way binging-->
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input [ngModel]="student.name" type="text" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>Sat:</td>
+            <td>
+                <input [ngModel]="student.sat" type="text" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>GPA:</td>
+            <td>
+                <input [ngModel]="student.gpa" type="text" disabled>
+            </td>
+        </tr>
+        
+        <tr *ngIf="student.major"><!-- tests for major being null just as lower-->
+            <td>Major:</td>
+            <td>
+                <input [ngModel]="student.major.name" type="text"  disabled>
+        </tr>
+        <tr *ngIf="!student.major">
+            <td>Major:</td>
+            <td>
+                <input value="UNDECLARED" type="text"  disabled>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="delete()" class = "btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+

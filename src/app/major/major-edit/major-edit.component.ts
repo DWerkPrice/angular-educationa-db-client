@@ -10,7 +10,7 @@ import { Major } from '../major.class';
 })
 export class MajorEditComponent implements OnInit {
 
-  major: Major = new Major();
+  major: Major = new Major();//incidence
 
   save(): void{
     this.majorsvc.change(this.major).subscribe(

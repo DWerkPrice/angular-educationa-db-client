@@ -11,7 +11,10 @@ const url: string = "http://localhost:5000/api/majors";//added this
   providedIn: 'root'
 })
 export class MajorService {
-
+  
+  checkCode(code: string): Observable<any> {
+    return this.http.get(`${url}/code/${code}`) as Observable<any>;
+  }
   list(): Observable<Major[]>{ // added this function
     return this.http.get(`${url}`) as Observable<Major[]>;
   }

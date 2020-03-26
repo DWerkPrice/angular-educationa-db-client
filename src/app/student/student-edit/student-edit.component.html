@@ -1,1 +1,47 @@
-<p>student-edit works!</p>
+<app-menu></app-menu>
+<div class="component">
+
+    <table class="table table-sm table-striped">
+
+        <tr>
+            <td>Id</td>
+            <td>
+                <input [(ngModel)]="student.id" type="text" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input [(ngModel)]="student.name" type="text" >
+            </td>
+        </tr>
+        <tr>
+            <td>SAT</td>
+            <td>
+                <input [(ngModel)]="student.sat" type="number" >
+            </td>
+        </tr>
+        <tr>
+            <td>GPA</td>
+            <td>
+                <input [(ngModel)]="student.gpa" type="number" >
+            </td>
+        </tr>
+        <tr>
+            <td>Major</td>
+            <td>
+                <select [(ngModel)]="student.majorId">
+                    <option *ngFor="let m of majors" value="{{+m.id}}">{{m.name}}</option>
+                    <option value="">Undeclared</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)="save()" class="btn btn-danger">Save</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+

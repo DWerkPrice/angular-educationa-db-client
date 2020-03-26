@@ -15,6 +15,11 @@ import { StudentDetailComponent } from './student/student-detail/student-detail.
 import { StudentCreateComponent } from './student/student-create/student-create.component';
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
 import { SortPipe } from './pipes/sort.pipe';
+import { MenuitemComponent } from './menu/menuitem/menuitem.component';
+//import { MajorFindComponent } from './major-find/major-find.component';
+import { CheckCodeComponent } from './major/check-code/check-code.component';
+import { MajorSearchPipe } from './major/major-search.pipe';
+import { StudentSearchPipe } from './student/student-search.pipe';
 
 @NgModule({// just trying to restart
   declarations: [
@@ -28,7 +33,12 @@ import { SortPipe } from './pipes/sort.pipe';
     StudentDetailComponent,
     StudentCreateComponent,
     StudentEditComponent,
-    SortPipe
+    SortPipe,
+    MenuitemComponent,
+ //   MajorFindComponent,
+    CheckCodeComponent,
+    MajorSearchPipe,
+    StudentSearchPipe
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

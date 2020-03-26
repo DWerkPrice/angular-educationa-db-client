@@ -10,6 +10,8 @@ import { Major } from '../major.class';
 export class MajorListComponent implements OnInit {
 
   majors: Major[] = [];
+
+  searchCriteria: string = '';
   
   constructor(
     private major: MajorService// we create a primary of the class

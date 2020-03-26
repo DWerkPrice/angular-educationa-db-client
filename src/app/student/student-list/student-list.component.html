@@ -1,7 +1,9 @@
     <app-menu></app-menu> 
-    <a routerLink="/students/create">Create</a>
+    <Label>Student List</Label> |
+    <a routerLink="/students/create">Create</a> |
+    <input [(ngModel)] ="searchCriteria" type = "text" placeholder="Search">
     <div class="component">
-        <table style = "width:60%" class="table table-sm">
+        <table class="table table-sm">
             <tr>
                 <th>id</th>
                 <th>Name</th>
@@ -10,7 +12,7 @@
                 <th>MajorId</th>
 
             </tr>
-            <tr *ngFor="let s of students">
+            <tr *ngFor="let s of students | studentSearch: searchCriteria">
                 <td>{{s.id}}</td>
                 <td>{{s.name}}</td>
                 <td>{{s.sat}}</td>

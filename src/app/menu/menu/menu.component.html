@@ -1,6 +1,5 @@
-<div class="menu">
+<nav class="menu">
     <span *ngFor="let m of menus">
-        <a routerLink="{{m.route}}" title="{{m.tooltip}}"> {{m.display}}</a>
-        <span>| </span>
-    </span>
-</div>
+        <app-menuitem [menu]="m"></app-menuitem>
+ > </span>
+</nav>
